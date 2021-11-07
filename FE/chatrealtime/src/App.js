@@ -17,9 +17,11 @@ const App = () => {
 
       connection.on("ReceiveMessage", (user, message) => {
         console.log('message received: ', message)
+
       });
 
       await connection.start()
+
       await connection.invoke("JionRoom", {user, room})
       setConnection(connection)
     } catch(e){

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 import { Form, Button } from "react-bootstrap"
 
 const Lobby = ({ joinRoom }) => {
@@ -7,7 +7,7 @@ const Lobby = ({ joinRoom }) => {
     return <Form calssName="lobby"
         onSubmit={e => {
             e.preventDefault();
-            joinRoom(user, room);
+            joinRoom(user, room)
         }} >
         <Form.Group>
             <Form.Control placeholder='name' onChange={e => setUser(e.target.value)} />
@@ -17,4 +17,4 @@ const Lobby = ({ joinRoom }) => {
     </Form>
 }
 
-export default Lobby;
+export default Lobby
