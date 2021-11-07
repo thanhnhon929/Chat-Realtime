@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\FPTSHOP-DELL\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\FPTSHOP-DELL\\.nuget\\packages"
+    ]
+  }
+}
