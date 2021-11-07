@@ -1,2 +1,2 @@
 # Chat Realtime
- Chat realtime ( reactjs + signalr )
+ Chat realtime ( reactjs + signalr ).
