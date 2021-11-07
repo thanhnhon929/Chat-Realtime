@@ -1,8 +1,8 @@
 import 'react-bootstrap'
 import './App.css'
-import Lobby from './components/Lobby';
+import Lobby from './components/Lobby'
 import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr'
-import { useState } from 'react';
+import { useState } from 'react'
 
 const App = () => {
   const [connection, setConnection] = useState();
