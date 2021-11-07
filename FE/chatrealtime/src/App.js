@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import 'react-bootstrap'
+import './App.css'
 import Lobby from './components/Lobby';
-import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr';
+import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr'
 import { useState } from 'react';
 
 const App = () => {
@@ -16,12 +16,12 @@ const App = () => {
 
 
       connection.on("ReceiveMessage", (user, message) => {
-        console.log('message received: ', message);
-      });
+        console.log('message received: ', message)
+      })
 
       await connection.start();
-      await connection.invoke("JionRoom", {user, room});
-      setConnection(connection);
+      await connection.invoke("JionRoom", {user, room})
+      setConnection(connection)
     } catch(e){
       console.log(e);
     }
@@ -33,4 +33,4 @@ const App = () => {
   </div>
 }
 
-export default App;
+export default App
