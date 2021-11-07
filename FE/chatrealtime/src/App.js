@@ -1,11 +1,11 @@
 import 'react-bootstrap'
-import './App.css';
-import Lobby from './components/Lobby';
-import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr';
-import { useState } from 'react';
+import './App.css'
+import Lobby from './components/Lobby'
+import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr'
+import { useState } from 'react'
 
 const App = () => {
-  const [connection, setConnection] = useState();
+  const [connection, setConnection] = useState()
 
   const joinRoom = async(user, room) => {
     try {
