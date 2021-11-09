@@ -18,6 +18,19 @@ namespace Chatrealtime
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
+
+            services.AddSingleton<IDictionary<string, UserConnection>>(opts => new Dictionary<string, UserConnection>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +42,8 @@ namespace Chatrealtime
             }
 
             app.UseRouting();
+
+            app.UseCors(); 
 
             app.UseEndpoints(endpoints =>
             {

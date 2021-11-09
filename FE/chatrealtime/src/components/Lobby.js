@@ -2,11 +2,11 @@ import { useState } from "react"
 import { Form, Button } from "react-bootstrap"
 
 const Lobby = ({ joinRoom }) => {
-    const [user, setUser] = useState();
-    const [room, setRoom] = useState();
-    return <Form calssName="lobby"
+    const [user, setUser] = useState()
+    const [room, setRoom] = useState()
+    return <Form className="lobby"
         onSubmit={e => {
-            e.preventDefault();
+            e.preventDefault()
             joinRoom(user, room)
         }} >
         <Form.Group>
