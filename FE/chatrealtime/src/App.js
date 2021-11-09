@@ -54,8 +54,9 @@ const App = () => {
     }
   }
   return <div className="app">
-    <h2>MyChat</h2>
-    <hr className="line"/>
+    <img src="https://i.imgur.com/98Fvo0d.png" />
+    <h2>Hòn đảo kí sinh</h2>
+
     {!connection
     ?<Lobby joinRoom ={joinRoom} />
     :<Chat messages={messages} sendMessage={sendMessage} 
