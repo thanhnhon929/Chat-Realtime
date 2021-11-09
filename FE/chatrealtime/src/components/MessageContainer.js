@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react"
-
 const MessageContainer = ({ messages }) => {
     const messageRef = useRef()
 //scroll auto 
